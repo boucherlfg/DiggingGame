@@ -41,7 +41,7 @@ jobs:
           projectPath: ${{ env.project_path }}
           targetPlatform: WebGL
        # Output
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
            name: Build
            projectPath: ${{ env.project_path }}/build
