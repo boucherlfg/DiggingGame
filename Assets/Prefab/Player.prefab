@@ -336,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596e7c5e6345441aae8f3d5d8ef1ae42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 10
-  maxSpeed: 100
+  minSpeed: 20
+  maxSpeed: 120
   maxFallingDamage: 400
   foot: {fileID: 749000018299690052}
   lifeScript: {fileID: 1048725791037224490}

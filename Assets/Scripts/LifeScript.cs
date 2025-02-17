@@ -25,7 +25,11 @@ public class LifeScript : MonoBehaviour
 
     private void Update()
     {
-        if(_currentCurrentLife < 0) Destroy(gameObject);
+        if (_currentCurrentLife < 0)
+        {
+            Events.OnDeath.Invoke();
+            Destroy(gameObject);
+        }
     }
 
     public void ExplosionDamage(Vector2 explosionPosition, float explosionRange)

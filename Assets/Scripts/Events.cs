@@ -7,4 +7,5 @@ public abstract class Events
     public static readonly UnityEvent<float> OnLifeChanged = new();
     public static readonly UnityEvent<float> OnDepthChanged = new();
     public static readonly UnityEvent<int> OnConsumableChanged = new();
+    public static readonly UnityEvent OnDeath = new();
 }

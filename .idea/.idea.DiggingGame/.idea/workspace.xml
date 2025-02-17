@@ -5,74 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078c3a38-f1aa-430b-a368-de5b8c207c3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FallingDamage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FallingDamage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerVertical.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerVertical.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DarkMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DarkMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeepDimmer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DeepDimmer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Extensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Extensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FollowParent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FollowParent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FollowVelocity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FollowVelocity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Foot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Foot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LightBlocks.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LightBlocks.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LightMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LightMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MakeCameraFollow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MakeCameraFollow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Coal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Coal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Copper.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Copper.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Crystal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Crystal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Dirt.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Dirt.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Gold.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Gold.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Grass.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Grass.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Iron.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Iron.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rock.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rock.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Silver.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Silver.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Tin.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Tin.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ResourceScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ResourceScript.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SemiDark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SemiDark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Slider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Slider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextIndicator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextIndicator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WorldGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WorldGenerator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/selectorFrameSprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/selectorFrameSprite.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LifeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LifeScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/FollowVelocity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -147,15 +85,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1760">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1760" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -180,6 +116,7 @@
       <workItem from="1739409151274" duration="1977000" />
       <workItem from="1739497798935" duration="276000" />
       <workItem from="1739756236631" duration="6164000" />
+      <workItem from="1739769350319" duration="319000" />
     </task>
     <servers />
   </component>
