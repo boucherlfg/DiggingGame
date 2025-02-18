@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2347861aee4a4605857d8216df822712, type: 3}
-  m_Name: New Shop Slot
+  m_Name: Platform
   m_EditorClassIdentifier: 
-  input: 
-  output: 0e000000
+  sprite: {fileID: 966157522, guid: d600941833ff8844784ea8516b4d3ba4, type: 3}
+  input: 020000000200000002000000
+  output: 0c000000

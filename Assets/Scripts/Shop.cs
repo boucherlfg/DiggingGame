@@ -1,22 +1,18 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
     [SerializeField] private GameObject textMessage;
-    [Serializable]
-    public struct Price
-    {
-        public ResourceEnum resource;
-        public int price;
-    }
-    [SerializeField] private Price[] prices;
-    [SerializeField] private Price[] offers;
     [SerializeField] private RectTransform shop;
-
+    [SerializeField] private GameObject shopButton;
+    [SerializeField] private Recipe[] recipes;
     [SerializeField]
     private Vector2 shopPosition;
 
@@ -31,6 +27,7 @@ public class Shop : MonoBehaviour
     {
         _inventory = ServiceManager.Instance.Get<Inventory>();
         _mainCamera = Camera.main;
+        Events.OnInventoryChanged.AddListener(Refresh);
     }
 
     private void Update()
@@ -53,33 +50,41 @@ public class Shop : MonoBehaviour
         shop.gameObject.SetActive(false);
     }
 
-    public void SellStuff()
+    private void Refresh(Inventory inventory)
     {
-        var total = 0;
-        foreach (var item in prices)
+        foreach (Transform child in shop)
         {
-            var count = _inventory.Count(item.resource);
-            total += count;
-            _inventory.Money += item.price * count;
-            _inventory.RemoveAll(item.resource);
+            Destroy(child.gameObject);
         }
-        
-        Instantiate(textMessage, shopPosition, Quaternion.identity).GetComponent<TMP_Text>().text = $"{total} $";
-        
+
+        foreach (var recipe in recipes)
+        {
+            if (!inventory.Has(recipe.Input)) return;
+            
+            var shopButtonObj = Instantiate(shopButton, shop);
+            var button = shopButtonObj.GetComponent<Button>();
+            button.onClick.AddListener(() => Craft(recipe));
+            
+            var image = shopButtonObj.GetComponent<Image>();
+            image.sprite = recipe.Sprite;
+        }
     }
 
-    public void BuyStuff(ResourceEnum resource)
+    private void Craft(Recipe recipe)
     {
-        if (offers.All(x => x.resource != resource)) return;
-        var offer = offers.FirstOrDefault(x => x.resource == resource);
+        _inventory.RemoveAll(recipe.Input);
+        _inventory.AddRange(recipe.Output);
+        StartCoroutine(ShowText(recipe.Output));
+        return;
 
-        if (_inventory.Money < offer.price)
+        IEnumerator ShowText(List<ResourceEnum> resources)
         {
-            Instantiate(textMessage, shopPosition, Quaternion.identity).GetComponent<TMP_Text>().text = "Not enough money";
-            return;
+            foreach (var resource in resources)
+            {
+                var text = Instantiate(textMessage, shop.transform.position, Quaternion.identity);
+                text.GetComponent<TMP_Text>().text = resource.ToString();
+                yield return new WaitForSeconds(0.25f);
+            }
         }
-        
-        _inventory.Money -= offer.price;
-        _inventory.Add(offer.resource);
     }
 }

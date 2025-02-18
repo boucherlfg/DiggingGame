@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078c3a38-f1aa-430b-a368-de5b8c207c3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopSlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipe.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +116,7 @@
       <workItem from="1739769350319" duration="354000" />
       <workItem from="1739826361587" duration="21774000" />
       <workItem from="1739895773880" duration="1577000" />
+      <workItem from="1739910844081" duration="856000" />
     </task>
     <servers />
   </component>
@@ -157,58 +161,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Shop.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Shop.cs" containingFunctionPresentation="Method 'OnTriggerEnter2D'">
-            <startOffsets>
-              <option value="1134" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1166" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Shop.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Shop.cs" containingFunctionPresentation="Method 'OnTriggerExit2D'">
-            <startOffsets>
-              <option value="1301" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1334" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Shop.cs</url>
-          <line>43</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Shop.cs" containingFunctionPresentation="Method 'OnTriggerEnter2D'">
-            <startOffsets>
-              <option value="1076" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1108" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Shop.cs</url>
-          <line>50</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Shop.cs" containingFunctionPresentation="Method 'OnTriggerExit2D'">
-            <startOffsets>
-              <option value="1243" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1275" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

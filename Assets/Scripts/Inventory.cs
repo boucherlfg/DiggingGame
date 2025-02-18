@@ -27,6 +27,14 @@ public class Inventory
         Events.OnInventoryChanged.Invoke(this);
     }
 
+    public void RemoveAll(IEnumerable<ResourceEnum> items)
+    {
+        foreach (var item in items)
+        {
+            _items.Remove(item);
+        }
+        Events.OnInventoryChanged.Invoke(this);
+    }
     public void RemoveAll(ResourceEnum item)
     {
         _items.RemoveAll(x => x == item);
