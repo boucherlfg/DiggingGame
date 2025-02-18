@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 5919808535169770582}
   - component: {fileID: 5578421402762018879}
   - component: {fileID: 286886592529580156}
-  - component: {fileID: 3855405620818663226}
+  - component: {fileID: 6468624273771320574}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3855405620818663226}
-        m_TargetAssemblyTypeName: Healer, Assembly-CSharp
-        m_MethodName: Heal
+      - m_Target: {fileID: 6468624273771320574}
+        m_TargetAssemblyTypeName: ShopBuyer, Assembly-CSharp
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3855405620818663226
+--- !u!114 &6468624273771320574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,10 +330,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375917891554737539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274de7811f211814883da99880e087c9, type: 3}
+  m_Script: {fileID: 11500000, guid: f9233cadfcff03746b49aff7a9cd8f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 50
+  shop: {fileID: 8929854661833644911}
+  resource: 17
 --- !u!1 &2084872705851956061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,13 +1208,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 6233837977280424911}
+        m_TargetAssemblyTypeName: ShopBuyer, Assembly-CSharp
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1367,13 +1368,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 856148293433825590}
+        m_TargetAssemblyTypeName: ShopBuyer, Assembly-CSharp
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

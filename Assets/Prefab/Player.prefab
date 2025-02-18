@@ -290,6 +290,7 @@ MonoBehaviour:
   attackRadius: 0.5
   selectedConsumable: 0
   consumablePrefab:
+  - {fileID: 5748267917535917069, guid: 81e65a8401b5a64459381b3530a9455d, type: 3}
   - {fileID: 8879414094396601848, guid: b206dd8de522c92479d7d0d72e3c88bd, type: 3}
   - {fileID: 8709146729307759035, guid: 65c97f194b0991442a90639eeb51025a, type: 3}
   - {fileID: 5468698132969258243, guid: 76cad321efd50224a96925324ac4bacf, type: 3}
