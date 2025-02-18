@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="078c3a38-f1aa-430b-a368-de5b8c207c3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Healer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Healer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/shop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <workItem from="1739756236631" duration="6164000" />
       <workItem from="1739769350319" duration="354000" />
       <workItem from="1739826361587" duration="21774000" />
-      <workItem from="1739895773880" duration="970000" />
+      <workItem from="1739895773880" duration="1577000" />
     </task>
     <servers />
   </component>
