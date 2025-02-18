@@ -4844,8 +4844,9 @@ GameObject:
   - component: {fileID: 2382433618849888335}
   - component: {fileID: 6982136214627457914}
   - component: {fileID: 5739092706234105683}
-  - component: {fileID: 326540743532075443}
   - component: {fileID: 1979536668346526407}
+  - component: {fileID: 326540743532075443}
+  - component: {fileID: -7251184578489813643}
   m_Layer: 0
   m_Name: Dynamite
   m_TagString: Untagged
@@ -4862,7 +4863,7 @@ Transform:
   m_GameObject: {fileID: 8709146729307759035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.97, y: 0.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4970,21 +4971,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &326540743532075443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709146729307759035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d9e078e33ebcd499f9da7427fbd9c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticle: {fileID: 8870568727153295226, guid: 2a27f23abe781d84a84958441d55ad7c, type: 3}
-  delayBeforeExplosion: 3
-  explosionRange: 4
 --- !u!50 &1979536668346526407
 Rigidbody2D:
   serializedVersion: 5
@@ -5012,3 +4998,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &326540743532075443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709146729307759035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d9e078e33ebcd499f9da7427fbd9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticle: {fileID: 8870568727153295226, guid: 2a27f23abe781d84a84958441d55ad7c, type: 3}
+  delayBeforeExplosion: 3
+  explosionRange: 4
+--- !u!114 &-7251184578489813643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709146729307759035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfeeae1f6974456a262399a5ab3d4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectable: 0
+  resourceName: 0e000000
+  currentDurability: 0
+  durability: 0

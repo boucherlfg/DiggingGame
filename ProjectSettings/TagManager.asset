@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
+  - Player
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,6 @@ TagManager:
   - Player
   - Tree
   - Block
-  - 
   - 
   - 
   - 

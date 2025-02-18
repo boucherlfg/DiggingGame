@@ -12,6 +12,12 @@
     Gold = 9,
     Silver = 10,
     Crystal = 11,
+    
     Platform = 12,
     Light = 13,
+    Dynamite = 14,
+    Pickaxe = 15,
+    Sulfur = 16,
+    LifePotion = 17,
+    Teleporter = 18,
 }

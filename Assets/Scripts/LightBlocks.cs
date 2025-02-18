@@ -18,6 +18,7 @@ public class LightBlocks : MonoBehaviour
 
     private void OnDestroy()
     {
+        oldList.RemoveAll(x => !x);
         oldList.ForEach(x => x.GetComponent<SpriteRenderer>().material = semiDarkMaterial);
     }
 

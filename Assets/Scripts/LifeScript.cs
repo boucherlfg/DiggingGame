@@ -7,7 +7,8 @@ public class LifeScript : MonoBehaviour
     
     [SerializeField] private float life;
     private float _currentCurrentLife;
-    
+
+    public float Life => life;
     public float CurrentLife
     {
         get => _currentCurrentLife;

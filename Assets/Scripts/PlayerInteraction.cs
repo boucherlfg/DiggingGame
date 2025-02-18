@@ -20,19 +20,21 @@ public class PlayerInteraction : MonoBehaviour
     
     private float _attackTimer;
     private GameObject _targetted;
-    private readonly List<string> _inventory = new();
+    private Inventory _inventory;
 
     private Camera _mainCamera;
     private void Start()
     {
         _mainCamera = Camera.main;
+        _inventory = ServiceManager.Instance.Get<Inventory>();
+        _inventory.Add(ResourceEnum.Pickaxe);
     }
 
     private void Update()
     {
         HandleConsumableSelection();
 
-        if (selectedConsumable == 0)
+        if (selectedConsumable < 1)
         {
             HandleInteract();
         }
@@ -47,9 +49,15 @@ public class PlayerInteraction : MonoBehaviour
         if (!Input.GetButtonUp("Fire1")) return;
 
         Vector2 mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Physics2D.OverlapPoint(mousePos)) return;
         
         var consumable = consumablePrefab[selectedConsumable - 1];
         if (!consumable) return;
+        
+        var resource = consumable.GetComponent<ResourceScript>();
+        if (!_inventory.Has(resource.resourceName)) return;
+        foreach(var res in resource.resourceName) _inventory.Remove(res);
         
         Instantiate(consumable, mousePos, Quaternion.identity);
     }
@@ -70,8 +78,8 @@ public class PlayerInteraction : MonoBehaviour
         var closestWall = walls.Where(x => x && x.transform.CompareTag("Wall"))
             .OrderBy(x => Vector2.Distance(transform.position, x.transform.position))
             .FirstOrDefault();
-        ResourceScript resourceScript = null;
-        if (closestWall && closestWall.transform.TryGetComponent(out resourceScript))
+        
+        if (closestWall && closestWall.transform.TryGetComponent(out ResourceScript resourceScript))
         {
             Targetted = closestWall.transform.gameObject;
         }
@@ -106,7 +114,7 @@ public class PlayerInteraction : MonoBehaviour
         
         
         var res = resourceScript.resourceName;
-        _inventory.AddRange(res.Select(x => x.ToString()));
+        _inventory.AddRange(res);
         Destroy(Targetted);
 
         StartCoroutine(SpawnWords());
@@ -126,9 +134,8 @@ public class PlayerInteraction : MonoBehaviour
             }
         } 
     }
-    
-    
-    void HandleConsumableSelection()
+
+    private void HandleConsumableSelection()
     {
         bool consumableChanged = false;
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -150,6 +157,12 @@ public class PlayerInteraction : MonoBehaviour
         {
             consumableChanged = true;
             selectedConsumable = 3;
+        }
+        
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            consumableChanged = true;
+            selectedConsumable = 4;
         }
 
         if (consumableChanged)

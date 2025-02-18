@@ -4930,9 +4930,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054736048176727188}
-  - component: {fileID: -5109437248436777445}
   - component: {fileID: -5272501757639607010}
   - component: {fileID: 4984823529248573737}
+  - component: {fileID: 4850465084514001200}
   m_Layer: 8
   m_Name: Light
   m_TagString: Untagged
@@ -4956,52 +4956,6 @@ Transform:
   - {fileID: 9136294658931346052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &-5109437248436777445
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468698132969258243}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0a3fd6ca41a45f44ca568abdc4cdb58b, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &-5272501757639607010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,3 +4984,19 @@ MonoBehaviour:
   lightMaterial: {fileID: 2100000, guid: ad131248b618dc0428677682f842777f, type: 2}
   semiDarkMaterial: {fileID: 2100000, guid: 76eb3dd4f4ce2424391961a30caaa50a, type: 2}
   darkMaterial: {fileID: 2100000, guid: fb432beb4c20b8e4aaf46c4f895f0c0c, type: 2}
+--- !u!114 &4850465084514001200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468698132969258243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfeeae1f6974456a262399a5ab3d4e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectable: 0
+  resourceName: 0d000000
+  currentDurability: 0
+  durability: 0

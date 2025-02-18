@@ -1,30 +1,46 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class ConsumableDisplay : MonoBehaviour
 {
     [SerializeField]
-    private Image[] consumables;
-    private int _currentConsumable = 0;
+    private InventorySlot[] consumables;
+    private int _currentConsumable;
 
     [SerializeField]
     private Color selectedColor;
     [SerializeField]
     private Color unselectedColor;
+    
     private void Start()
     {
-        foreach(var image in consumables) image.color = unselectedColor;
+        foreach(var image in consumables) image.Color = unselectedColor;
         
         Events.OnConsumableChanged.AddListener(HandleConsumableChanged);
+        Events.OnInventoryChanged.AddListener(HandleInventoryChanged);
         HandleConsumableChanged(0);
+    }
+
+    private void HandleInventoryChanged(Inventory inventory)
+    {
+        foreach (var resource in consumables)
+        {
+            var count = inventory.Count(resource.Resource);
+            resource.Count = count;
+        }
     }
 
     private void HandleConsumableChanged(int arg0)
     {
-        consumables[_currentConsumable].color = unselectedColor;
-        _currentConsumable = arg0;
-        consumables[_currentConsumable].color = selectedColor;
+        if (_currentConsumable >= 0 && _currentConsumable < consumables.Length)
+        {
+            consumables[_currentConsumable].Color = unselectedColor;
+        }
 
+        _currentConsumable = arg0;
+
+        if (_currentConsumable >= 0 && _currentConsumable < consumables.Length)
+        {
+            consumables[_currentConsumable].Color = selectedColor;
+        }
     }
 }

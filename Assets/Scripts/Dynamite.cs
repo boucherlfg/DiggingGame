@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Dynamite : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Dynamite : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     IEnumerator Start()
     {
+        GetComponent<Rigidbody2D>().angularVelocity += Random.Range(-50, 50);
         yield return new WaitForSeconds(delayBeforeExplosion);
         Explode();
     }

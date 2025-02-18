@@ -35,21 +35,39 @@ public class WorldGenerator : MonoBehaviour
     public int height = 10000;
     [SerializeField] private Vector2 playerStartPosition = new Vector2(0, 4);
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject shop;
+    [SerializeField] private Vector2 shopStartPosition = new Vector2(0, 0.5f);
     [SerializeField] private GameObject dirt;
     [SerializeField] private Resource[] resources;
     [SerializeField] private GameObject bedrock;
     [SerializeField] private Resource empty;
     [SerializeField] private GameObject[] trees;
+    [SerializeField] private int treeAmount = 10;
+    private readonly List<GameObject> _treeInstances = new();
+    private Transform _parent;
     private void Start()
     {
         Generate();
     }
 
+    private void Update()
+    {
+        RegenerateTrees();
+    }
+
+    void RegenerateTrees()
+    {
+        _treeInstances.RemoveAll(tree => tree.transform.childCount <= 2);
+        while (_treeInstances.Count < treeAmount)
+        {
+            GenerateOneTree();
+        } 
+    }
     private int[] _map;
     public void Generate()
     {
-        var parent = new GameObject().transform;
-        parent.parent = transform;
+        _parent = new GameObject().transform;
+        _parent.parent = transform;
         _map = new int[width * height];
         for (var i = 0; i < width; i++)
         {
@@ -74,26 +92,27 @@ public class WorldGenerator : MonoBehaviour
                 var value = _map[i * height + j];
                 if (value < 0) continue;
                 var prefab = value == 0 ? dirt : resources[value - 1].prefab;
-                Instantiate(prefab, new Vector3(i - width/2, -j), Quaternion.identity, parent);
+                Instantiate(prefab, new Vector3(i - width/2, -j), Quaternion.identity, _parent);
             }
         }
-        GenerateBedrock(parent);
-        GenerateTrees(parent);
+        GenerateBedrock();
+        GenerateTrees();
         Instantiate(player, playerStartPosition, Quaternion.identity);
+        Instantiate(shop, shopStartPosition, Quaternion.identity);
     }
 
-    private void GenerateBedrock(Transform parent)
+    private void GenerateBedrock()
     {
         const int floor = 30;
         for (var i = -width/2 - 1; i < width/2; i++)
         {
-            Instantiate(bedrock, new Vector3(i, -height), Quaternion.identity, parent);
+            Instantiate(bedrock, new Vector3(i, -height), Quaternion.identity, _parent);
         }
 
         for (var j = -height; j < 0; j++)
         {
-            Instantiate(bedrock, new Vector3(-width/2 - 1, j), Quaternion.identity, parent);
-            Instantiate(bedrock, new Vector3(width/2, j), Quaternion.identity, parent);
+            Instantiate(bedrock, new Vector3(-width/2 - 1, j), Quaternion.identity, _parent);
+            Instantiate(bedrock, new Vector3(width/2, j), Quaternion.identity, _parent);
         }
 
         var radius = width / 2 + 1;
@@ -106,18 +125,23 @@ public class WorldGenerator : MonoBehaviour
                 continue;
             }
             alreadyCovered.Add(pos);
-            Instantiate(bedrock, (Vector2)pos, Quaternion.identity, parent);
+            Instantiate(bedrock, (Vector2)pos, Quaternion.identity, _parent);
         }
     }
 
-    private void GenerateTrees(Transform parent)
+    private void GenerateTrees()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < treeAmount; i++)
         {
-            var spawn = new Vector2(Random.Range(-width/2, width/2), 0);
-            var tree = trees.Random();
-            Instantiate(tree, spawn, Quaternion.identity, parent);
+            GenerateOneTree();
         }
+    }
+
+    private void GenerateOneTree()
+    {
+        var spawn = new Vector2(Random.Range(-width/2, width/2), 0);
+        var tree = trees.Random();
+        _treeInstances.Add(Instantiate(tree, spawn, Quaternion.identity, _parent));
     }
     private void GenerateEmpty()
     {
