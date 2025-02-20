@@ -11,24 +11,25 @@ public class Dynamite : MonoBehaviour
 
     public float explosionRange = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    IEnumerator Start()
+    protected void Start()
     {
         GetComponent<Rigidbody2D>().angularVelocity += Random.Range(-50, 50);
-        yield return new WaitForSeconds(delayBeforeExplosion);
-        Explode();
+        StartCoroutine(Explode());
     }
 
-    private void Explode()
+    private IEnumerator Explode()
     {
+        yield return new WaitForSeconds(delayBeforeExplosion);
+        
         var results = new Collider2D[300];
         var size = Physics2D.OverlapCircle(transform.position, explosionRange, new ContactFilter2D().NoFilter(), results);
-        var breakables = results.Take(size).Where(x => x && x.GetComponent<Breakable>());
+        var breakables = results.Take(size).Where(x => x && x.TryGetComponent<Breakable>(out _));
         foreach(var breakable in breakables) Destroy(breakable.gameObject);
         Instantiate(explosionParticle, transform.position, Quaternion.identity);
         Destroy(gameObject);
         results = Array.FindAll(results, x => x);
-        var col = results.FirstOrDefault(x => x.GetComponent<LifeScript>());
-        if (!col) return;
+        var col = results.FirstOrDefault(x => x.TryGetComponent<LifeScript>(out _));
+        if (!col) yield break;
         
         col.TryGetComponent(out LifeScript player);
         player.ExplosionDamage(transform.position, explosionRange);

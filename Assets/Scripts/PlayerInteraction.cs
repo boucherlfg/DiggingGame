@@ -1,138 +1,82 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private GameObject textIndicator;
-    [SerializeField] private ParticleSystem destroyParticle;
-    
-    [SerializeField] public float attackInterval = 0.25f;
-    [SerializeField] private float attackDamage = 1;
-    [SerializeField] public float attackDistance = 2;
-    [SerializeField] private float attackRadius = 0.5f;
+    public float attackInterval = 0.25f;
+    public float attackDamage = 1;
+    public float attackDistance = 2;
+    public float attackRadius = 0.5f;
 
     [SerializeField] private int selectedConsumable;
-    [SerializeField]
-    private List<GameObject> consumablePrefab = new();
+    [SerializeField] private Transform hotkeys;
+    private readonly List<Transform> _hotkeysList = new();
     
-    private float _attackTimer;
-    private GameObject _targetted;
     private Inventory _inventory;
-
-    private Camera _mainCamera;
     private void Start()
     {
-        _mainCamera = Camera.main;
         _inventory = ServiceManager.Instance.Get<Inventory>();
         _inventory.Add(ResourceEnum.Pickaxe);
+        
+        foreach(Transform child in hotkeys) _hotkeysList.Add(child);
     }
 
     private void Update()
     {
         HandleConsumableSelection();
-
-        if (selectedConsumable < 1)
-        {
-            HandleInteract();
-        }
-        else
-        {
-            HandleConsumableUse();
-        }
+        
+        HandlePassive();
+        HandleUse();
+        HandleConsume();
     }
 
-    void HandleConsumableUse()
+    void HandlePassive()
+    {
+        var prefab = _hotkeysList[selectedConsumable];
+        
+        if (!prefab) return;
+        if (!prefab.TryGetComponent<ResourceBased>(out var resource)) return;
+        if (!_inventory.Has(resource.resource)) return;
+        if (!prefab.TryGetComponent<Passive>(out var passive)) return;
+        
+        passive.Effect(this);
+    }
+    void HandleConsume()
     {
         if (!Input.GetButtonUp("Fire1")) return;
 
-        Vector2 mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        var prefab = _hotkeysList[selectedConsumable];
+        
+        if (!prefab) return;
+        if (!prefab.TryGetComponent<ResourceBased>(out var resource)) return;
+        {
+            if (!_inventory.Has(resource.resource)) return;
+        }
 
-        if (Physics2D.OverlapPoint(mousePos)) return;
+        if (!prefab.TryGetComponent<ConsumableScript>(out var consumable)) return;
         
-        var consumable = consumablePrefab[selectedConsumable - 1];
-        if (!consumable) return;
-        
-        var resource = consumable.GetComponent<ResourceScript>();
-        if (!_inventory.Has(resource.resourceName)) return;
-        foreach(var res in resource.resourceName) _inventory.Remove(res);
-        
-        Instantiate(consumable, mousePos, Quaternion.identity);
+        if(resource) _inventory.Remove(resource.resource);
+        consumable.Consume(this);
     }
     
-    void HandleInteract()
+    void HandleUse()
     {
-        var mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        var direction = mousePos - transform.position;
-        var walls = new RaycastHit2D[5];
-        var size = Physics2D.Raycast(transform.position, 
-            direction.normalized, 
-            new ContactFilter2D().NoFilter(), 
-            walls, 
-            attackDistance);
+        var prefab = _hotkeysList[selectedConsumable];
         
-        if (size <= 0) return;
+        if (!prefab) return;
+        if (!prefab.TryGetComponent(out Usable usable)) return;
+        if (!prefab.TryGetComponent(out ResourceBased resource)) return;
+        if (!_inventory.Has(resource.resource)) return;
         
-        var closestWall = walls.Where(x => x && x.transform.CompareTag("Wall"))
-            .OrderBy(x => Vector2.Distance(transform.position, x.transform.position))
-            .FirstOrDefault();
-        
-        if (closestWall && closestWall.transform.TryGetComponent(out ResourceScript resourceScript))
+        if (Input.GetButton("Fire1"))
         {
-            Targetted = closestWall.transform.gameObject;
+            usable.Use(this);
         }
-        else if (closestWall)
+        else
         {
-            var point = closestWall.point;
-            var components = closestWall.transform.GetComponentsInChildren<ResourceScript>();
-            if (components.Length <= 0) return;
-
-            resourceScript = components.OrderBy(x => Vector2.Distance(x.transform.position, point)).FirstOrDefault();
-            if (!resourceScript) return;
-
-            Targetted = resourceScript.gameObject;
+            usable.StopUsing(this);
         }
-        else return;
-        
-        if (!Input.GetButton("Fire1")) return;
-        
-        var position = Targetted.transform.position;
-        position.z = -1;
-        
-        _attackTimer += Time.deltaTime;
-        if (_attackTimer > attackInterval)
-        {
-            // destroy particle
-            Instantiate(destroyParticle, position, Quaternion.identity);
-            _attackTimer = 0;
-        } 
-        
-        resourceScript.currentDurability -= Time.deltaTime * attackDamage;
-        if (resourceScript.currentDurability > 0) return;
-        
-        
-        var res = resourceScript.resourceName;
-        _inventory.AddRange(res);
-        Destroy(Targetted);
-
-        StartCoroutine(SpawnWords());
-        return;
-        
-        IEnumerator SpawnWords()
-        {
-            // text label
-            foreach (var r in res)
-            {
-                var text = Instantiate(textIndicator, position, Quaternion.identity);
-                if (text.TryGetComponent<TMPro.TMP_Text>(out var label))
-                {
-                    label.text = r.ToString();
-                }
-                yield return new WaitForSeconds(0.25f);
-            }
-        } 
     }
 
     private void HandleConsumableSelection()
@@ -168,32 +112,6 @@ public class PlayerInteraction : MonoBehaviour
         if (consumableChanged)
         {
             Events.OnConsumableChanged.Invoke(selectedConsumable);
-        }
-    }
-    
-    private GameObject Targetted
-    {
-        get => _targetted;
-        set
-        {
-            if (_targetted == value) return;
-            if (_targetted && _targetted.transform.childCount > 0)
-            {
-                if (!_targetted.TryGetComponent<ResourceScript>(out var resourceScript)) return;
-                if (!resourceScript.selectable) return;
-                _targetted.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            
-            _targetted = value;
-            
-            if (!_targetted) return;
-            
-            if (_targetted.transform.childCount > 0)
-            {
-                if (!_targetted.TryGetComponent<ResourceScript>(out var resourceScript)) return;
-                if (!resourceScript.selectable) return;
-                _targetted.transform.GetChild(0).gameObject.SetActive(true);
-            }
         }
     }
 }

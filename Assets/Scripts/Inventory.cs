@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
-public class Inventory
+using UnityEditor;
+
+public class Inventory : IEnumerable<ResourceEnum>
 {
     private int _money;
 
@@ -54,8 +57,22 @@ public class Inventory
         Events.OnInventoryChanged.Invoke(null);
     }
 
+    public bool Has(ResourceEnum item)
+    {
+        return _items.Contains(item);
+    }
     public bool Has(List<ResourceEnum> items)
     {
         return items.All(item => Count(item) >= items.Count(x => x == item));
+    }
+
+    public IEnumerator<ResourceEnum> GetEnumerator()
+    {
+        return _items.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return _items.GetEnumerator();
     }
 }

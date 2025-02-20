@@ -5,10 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078c3a38-f1aa-430b-a368-de5b8c207c3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConsumableScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ConsumableScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Digger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Digger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LightBlocksPassive.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/LightBlocksPassive.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Passive.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Passive.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerTargettable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerTargettable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceBased.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceBased.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnOnConsume.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnOnConsume.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Targettable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Targettable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIEvents.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIEvents.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Usable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Usable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DiggingGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Coal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Coal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Copper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Copper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Crystal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Crystal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Dirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Dirt.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Gold.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Gold.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Grass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Grass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Iron.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Iron.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Leaves.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Leaves.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Silver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Silver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Sulfur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Sulfur.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Tin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Tin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Blocks/Wood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Blocks/Wood.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/CraftSlot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/CraftSlot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Destroy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Destroy.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Dynamite.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Dynamite.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Explosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Explosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/InventorySlot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/InventorySlot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LifePotion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LifePotion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Light.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Light.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Platform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Platform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Teleporter.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Teleporter.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Text (TMP).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Text (TMP).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/selectorFrame.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/selectorFrame.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/shop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChestScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChestScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dynamite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dynamite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Healer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Healer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopSlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Recipe.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotkeySlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HotkeySlot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightBlocks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightBlocks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourceScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CraftingTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CraftingTable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Teleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Teleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/spritesheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/spritesheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/spritesheet.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +95,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Healer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/fa/2e9a26d6/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84f0d810adef4e6c8deab33e4ae93f7c1dec00/ba/0f2008aa/UnityEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InventoryDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MenuDisplay.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -82,13 +161,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12164">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12164" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -116,7 +197,11 @@
       <workItem from="1739769350319" duration="354000" />
       <workItem from="1739826361587" duration="21774000" />
       <workItem from="1739895773880" duration="1577000" />
-      <workItem from="1739910844081" duration="856000" />
+      <workItem from="1739910844081" duration="1514000" />
+      <workItem from="1739932261588" duration="1676000" />
+      <workItem from="1739942171611" duration="6532000" />
+      <workItem from="1739977192983" duration="6073000" />
+      <workItem from="1740083326665" duration="6193000" />
     </task>
     <servers />
   </component>
@@ -137,30 +222,108 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\ConsumableDisplay.cs" containingFunctionPresentation="Method 'HandleInventoryChanged'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
             <startOffsets>
-              <option value="718" />
+              <option value="1799" />
             </startOffsets>
             <endOffsets>
-              <option value="765" />
+              <option value="1845" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ConsumableDisplay.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\ConsumableDisplay.cs" containingFunctionPresentation="Method 'HandleInventoryChanged'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>66</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
             <startOffsets>
-              <option value="778" />
+              <option value="1863" />
             </startOffsets>
             <endOffsets>
-              <option value="801" />
+              <option value="1875" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="1892" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1939" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>68</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="1956" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2012" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>69</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="2029" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2068" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>71</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="2094" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2123" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="2146" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2163" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerInteraction.cs</url>
+          <line>77</line>
+          <properties documentPath="C:\Users\regli\DiggingGame\Assets\Scripts\PlayerInteraction.cs" containingFunctionPresentation="Method 'HandleUse'">
+            <startOffsets>
+              <option value="2209" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2232" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 8;
     private Rigidbody2D _rigidbody;

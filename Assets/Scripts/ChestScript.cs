@@ -10,6 +10,7 @@ public class ChestScript : ResourceScript
     {
         var values = Enum.GetValues(typeof(ResourceEnum));
         var rand = Random.Range(2, 5);
+        
         while(resourceName.Count < rand)
         {
             var random = Random.Range(0, values.Length);

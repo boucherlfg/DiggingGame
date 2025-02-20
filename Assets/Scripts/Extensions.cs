@@ -1,10 +1,70 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using Enumerable = System.Linq.Enumerable;
 
 public static class Extensions
 {
+    public static void LightAlgorithm(List<Transform> oldList, Transform center, Material dark, Material semi, Material light, int rayCount = 50, int floodIterations = 2)
+    {
+        oldList.RemoveAll(x => !x);
+        var newList = new List<Transform>();
+        var semiList = new List<Transform>();
+        for (var i = 0; i < rayCount; i++)
+        {
+            var angle = i * Mathf.PI * 2 / rayCount;
+            var direction = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f);
+            var hits = new RaycastHit2D[5];
+            if(Physics2D.Raycast(center.position, direction, new ContactFilter2D().NoFilter(), hits) <= 1) continue;
+            
+            var first = hits.Where(x => x &&x.transform != center && x.collider.CompareTag("Wall"))
+                .OrderBy(x => Vector2.Distance(center.position, x.transform.position)).FirstOrDefault();
+            
+            if (!first) continue;
+            if (newList.Contains(first.transform)) continue;
+            
+            newList.Add(first.transform);
+            Flood(floodIterations, first.transform);
+        }
+
+        foreach (var oldItem in oldList)
+        {
+            if (!oldItem.TryGetComponent(out SpriteRenderer rend)) return;
+            rend.material = semi;
+        }
+        foreach (var semiItem in semiList)
+        {
+            if (!semiItem.TryGetComponent(out SpriteRenderer rend)) return;
+            rend.material = semi;
+        }
+        foreach (var newItem in newList)
+        {
+            if (!newItem.TryGetComponent(out SpriteRenderer rend)) return;
+            rend.material = light;
+        }
+        
+        oldList = newList;
+        oldList.AddRange(semiList);
+        return;
+        
+        void Flood(int iterationsLeft, Transform first)
+        {
+            if (iterationsLeft <= 0) return;
+            for (var j = 0; j < 4; j++)
+            {
+                var angle2 = j * Mathf.PI / 2;
+                var direction2 = new Vector3(Mathf.Cos(angle2), Mathf.Sin(angle2), 0f);
+                var col = Physics2D.OverlapPoint(first.transform.position + direction2);
+                if (!col || !col.CompareTag("Wall")) continue;
+                if (col.TryGetComponent<LightBlocks>(out _)) continue;
+                if(newList.Contains(col.transform)) continue;
+            
+                semiList.Add(col.transform);
+                Flood(iterationsLeft - 1, col.transform);
+            }
+        }
+    }
     public static T Random<T>(this IEnumerable<T> list)
     {
         var enumerable = list as T[] ?? Enumerable.ToArray(list);

@@ -3,7 +3,7 @@
 public class ConsumableDisplay : MonoBehaviour
 {
     [SerializeField]
-    private InventorySlot[] consumables;
+    private HotkeySlot[] consumables;
     private int _currentConsumable;
 
     [SerializeField]

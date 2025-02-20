@@ -4846,7 +4846,6 @@ GameObject:
   - component: {fileID: 5739092706234105683}
   - component: {fileID: 1979536668346526407}
   - component: {fileID: 326540743532075443}
-  - component: {fileID: -7251184578489813643}
   m_Layer: 0
   m_Name: Dynamite
   m_TagString: Untagged
@@ -5010,22 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d9e078e33ebcd499f9da7427fbd9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resource: 14
   explosionParticle: {fileID: 8870568727153295226, guid: 2a27f23abe781d84a84958441d55ad7c, type: 3}
   delayBeforeExplosion: 3
   explosionRange: 4
---- !u!114 &-7251184578489813643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8709146729307759035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccfeeae1f6974456a262399a5ab3d4e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectable: 0
-  resourceName: 0e000000
-  currentDurability: 0
-  durability: 0
