@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UnityEditor;
 using UnityEngine;
 
 public class DistanceEnabler : MonoBehaviour
@@ -42,6 +41,8 @@ public class DistanceEnabler : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Handles.DrawSolidRectangleWithOutline(_enabled, new Color(0f, 0f, 0f, 0f), Color.black);
+        #if UNITY_EDITOR
+        UnityEditor.Handles.DrawSolidRectangleWithOutline(_enabled, new Color(0f, 0f, 0f, 0f), Color.black);
+        #endif
     }
 }
