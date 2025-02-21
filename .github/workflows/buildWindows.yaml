@@ -26,7 +26,7 @@ jobs:
         with:
             lfs: true
       # Cache
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ${{ env.project_path }}/Library
           key: ${{ env.project_path }}/Library
