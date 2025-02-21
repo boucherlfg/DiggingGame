@@ -53,4 +53,4 @@ jobs:
            CHANNEL: html5
            ITCH_GAME: digging-game
            ITCH_USER: deraju
-           PACKAGE: build/WebGL
+           PACKAGE: build/StandaloneWindows64
