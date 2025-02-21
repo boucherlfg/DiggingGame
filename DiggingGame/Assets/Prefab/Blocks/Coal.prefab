@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5109437248436777445}
   - component: {fileID: 1647419186572798876}
   - component: {fileID: -5272501757639607010}
+  - component: {fileID: -6272313182284399554}
   m_Layer: 8
   m_Name: Coal
   m_TagString: Wall
@@ -164,6 +165,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b39810f07b3dd32408d9aa509b11a011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6272313182284399554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468698132969258243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0bd57e2e2ea4a418f041842e0928baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7153081754468225141

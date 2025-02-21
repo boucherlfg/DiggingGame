@@ -45,6 +45,7 @@ public class WorldGenerator : MonoBehaviour
     [SerializeField] private int treeAmount = 10;
     private readonly List<GameObject> _treeInstances = new();
     private Transform _parent;
+
     private void Start()
     {
         Generate();

@@ -177,6 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054736048176727188}
+  - component: {fileID: 7354822821528081334}
   m_Layer: 8
   m_Name: Chest
   m_TagString: Wall
@@ -200,6 +201,18 @@ Transform:
   - {fileID: 393681402039166655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7354822821528081334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468698132969258243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0bd57e2e2ea4a418f041842e0928baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7153081754468225141
 PrefabInstance:
   m_ObjectHideFlags: 0
